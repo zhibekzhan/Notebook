@@ -16,6 +16,10 @@
 		47FBEBD52AB8A73E004E275C /* NotebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBEBD42AB8A73E004E275C /* NotebookTests.swift */; };
 		47FBEBDF2AB8A73E004E275C /* NotebookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBEBDE2AB8A73E004E275C /* NotebookUITests.swift */; };
 		47FBEBE12AB8A73E004E275C /* NotebookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBEBE02AB8A73E004E275C /* NotebookUITestsLaunchTests.swift */; };
+		47FBEBF42AB8A963004E275C /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBEBF32AB8A963004E275C /* TaskTableViewCell.swift */; };
+		47FBEBF62AB8A975004E275C /* SubTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBEBF52AB8A975004E275C /* SubTaskTableViewCell.swift */; };
+		47FBEBF82AB8AA0F004E275C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBEBF72AB8AA0F004E275C /* Task.swift */; };
+		47FBEBFA2AB8AA1E004E275C /* SubTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBEBF92AB8AA1E004E275C /* SubTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		47FBEBDA2AB8A73E004E275C /* NotebookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotebookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47FBEBDE2AB8A73E004E275C /* NotebookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookUITests.swift; sourceTree = "<group>"; };
 		47FBEBE02AB8A73E004E275C /* NotebookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		47FBEBF32AB8A963004E275C /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		47FBEBF52AB8A975004E275C /* SubTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTaskTableViewCell.swift; sourceTree = "<group>"; };
+		47FBEBF72AB8AA0F004E275C /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		47FBEBF92AB8AA1E004E275C /* SubTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +107,10 @@
 		47FBEBBC2AB8A73D004E275C /* Notebook */ = {
 			isa = PBXGroup;
 			children = (
-				47FBEBBD2AB8A73D004E275C /* AppDelegate.swift */,
-				47FBEBBF2AB8A73D004E275C /* SceneDelegate.swift */,
-				47FBEBC12AB8A73D004E275C /* ViewController.swift */,
-				47FBEBC32AB8A73D004E275C /* Main.storyboard */,
-				47FBEBC62AB8A73E004E275C /* Assets.xcassets */,
-				47FBEBC82AB8A73E004E275C /* LaunchScreen.storyboard */,
-				47FBEBCB2AB8A73E004E275C /* Info.plist */,
+				47FBEBF12AB8A795004E275C /* App */,
+				47FBEBEE2AB8A767004E275C /* Controller */,
+				47FBEBED2AB8A75B004E275C /* Model */,
+				47FBEBF22AB8A7A6004E275C /* Resources */,
 			);
 			path = Notebook;
 			sourceTree = "<group>";
@@ -125,6 +130,45 @@
 				47FBEBE02AB8A73E004E275C /* NotebookUITestsLaunchTests.swift */,
 			);
 			path = NotebookUITests;
+			sourceTree = "<group>";
+		};
+		47FBEBED2AB8A75B004E275C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				47FBEBF72AB8AA0F004E275C /* Task.swift */,
+				47FBEBF92AB8AA1E004E275C /* SubTask.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		47FBEBEE2AB8A767004E275C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				47FBEBC12AB8A73D004E275C /* ViewController.swift */,
+				47FBEBF32AB8A963004E275C /* TaskTableViewCell.swift */,
+				47FBEBF52AB8A975004E275C /* SubTaskTableViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		47FBEBF12AB8A795004E275C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				47FBEBBD2AB8A73D004E275C /* AppDelegate.swift */,
+				47FBEBBF2AB8A73D004E275C /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		47FBEBF22AB8A7A6004E275C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				47FBEBC62AB8A73E004E275C /* Assets.xcassets */,
+				47FBEBCB2AB8A73E004E275C /* Info.plist */,
+				47FBEBC82AB8A73E004E275C /* LaunchScreen.storyboard */,
+				47FBEBC32AB8A73D004E275C /* Main.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +302,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47FBEBF42AB8A963004E275C /* TaskTableViewCell.swift in Sources */,
 				47FBEBC22AB8A73D004E275C /* ViewController.swift in Sources */,
 				47FBEBBE2AB8A73D004E275C /* AppDelegate.swift in Sources */,
+				47FBEBFA2AB8AA1E004E275C /* SubTask.swift in Sources */,
 				47FBEBC02AB8A73D004E275C /* SceneDelegate.swift in Sources */,
+				47FBEBF82AB8AA0F004E275C /* Task.swift in Sources */,
+				47FBEBF62AB8A975004E275C /* SubTaskTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +487,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F6M8BS3873;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Notebook/Info.plist;
+				INFOPLIST_FILE = Notebook/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -467,7 +515,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F6M8BS3873;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Notebook/Info.plist;
+				INFOPLIST_FILE = Notebook/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
